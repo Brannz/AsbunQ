@@ -15,8 +15,10 @@ jobs:
 
       - name: Setup SSH
         run: |
-          echo "${{ secrets.ssh_keys }}" > ~/.ssh/id_rsa
-          chmod 600 ~/.ssh/id_rsa
+          if [ ! -f ~/.ssh/id_rsa ]; then
+            echo "${{ secrets.ssh_keys }}" > ~/.ssh/id_rsa
+            chmod 600 ~/.ssh/id_rsa
+          fi
           ssh-keyscan -H 47.236.31.81 >> ~/.ssh/known_hosts
 
       - name: Deploy to Server
