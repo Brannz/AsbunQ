@@ -13,16 +13,10 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v2
 
-      - name: Setup SSH
-        env:
-          SSH_PRIVATE_KEY: ${{ secrets.SSH_KEYS }}
+      - name: Logon
         run: |
-          echo "$SSH_PRIVATE_KEY" > key.pem
-          chmod 600 key.pem
-          eval "$(ssh-agent -s)"
-          ssh-add key.pem
-          ssh-keyscan -H 47.236.31.81 >> ~/.ssh/known_hosts
-
-      - name: Deploy to Server
+          sshpass -p "${{ secrets.SSH_PASS }}" ssh ecs-user@47.236.31.81:22
+          
+      - name: Check folder
         run: |
-          ssh ecs-user@47.236.31.81 'cd /opt/lampp/htdocs/github && git pull origin server'
+          cd /opt/lampp/htdocs/github
