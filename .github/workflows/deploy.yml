@@ -13,13 +13,11 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v2
 
-      - name: Set up SSH
+      - name: Setup SSH
         uses: webfactory/ssh-agent@v0.5.3
-        
-      - name: Logon
+        with:
+          ssh-private-key: ${{ secrets.SERVER_SSH_KEY }}
+
+      - name: Deploy to Server
         run: |
-          sshpass -p "${{ secrets.SSH_PASS }}" ssh ecs-user@47.236.31.81:22
-          
-      - name: Check folder
-        run: |
-          cd /opt/lampp/htdocs/github
+          ssh ecs-user@47.236.31.81 'cd /opt/lampp/htdocs/github && git pull origin main'
