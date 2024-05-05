@@ -13,6 +13,11 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v2
 
+      - name: Set up SSH
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y sshpass
+        
       - name: Logon
         run: |
           sshpass -p "${{ secrets.SSH_PASS }}" ssh ecs-user@47.236.31.81:22
