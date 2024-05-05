@@ -14,9 +14,14 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Setup SSH
-        uses: webfactory/ssh-agent@v0.5.3
-        with:
-          ssh-private-key: ${{ secrets.SSH_KEYS }}
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_KEYS }}
+        run: |
+          echo "$SSH_PRIVATE_KEY" > key.pem
+          chmod 600 key.pem
+          eval "$(ssh-agent -s)"
+          ssh-add key.pem
+          ssh-keyscan -H 47.236.31.81 >> ~/.ssh/known_hosts
 
       - name: Deploy to Server
         run: |
