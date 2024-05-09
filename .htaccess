@@ -11,7 +11,7 @@ RewriteCond %{REQUEST_FILENAME}\.php -f
 RewriteRule ^(.*)$ $1.php [L]
 
 # error document
-ErrorDocument 404 error.html
-ErrorDocument 403 error.html
-ErrorDocument 500 error.html
-ErrorDocument 503 error.html
+ErrorDocument 404 /error.html
+ErrorDocument 403 /error.html
+ErrorDocument 500 /error.html
+ErrorDocument 503 /error.html
