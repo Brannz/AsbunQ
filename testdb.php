@@ -5,7 +5,7 @@ $password = ""; // Ganti dengan kata sandi MySQL Anda
 $database = "card"; // Ganti dengan nama database yang ingin Anda hubungkan
 
 // Buat koneksi
-$conn = new mysqli($servername, $username, $password, $database);
+$conn = new mysqli($servername, $username, $password);
 
 // Periksa koneksi
 if ($conn->connect_error) {
