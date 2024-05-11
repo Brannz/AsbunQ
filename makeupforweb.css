@@ -4,6 +4,6 @@
 }
 .container {
     display: block;
-    align-items: center;
+    justify-content: center;
     background-color: #e7d2c0;
 }
