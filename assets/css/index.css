@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'BlueBerry';
-    src: url(../AsbunQ/Blueberry\ .woff);
+    src: url(../AsbunQ/assets/font/fontfamily.woff);
 }
 body {
     font-family: 'BlueBerry';
@@ -13,7 +13,7 @@ body {
 .container {
     background-color: none;
     display: grid;
-    background-image: url(../AsbunQ/img/vendor2.png);
+    background-image: url(../AsbunQ/assets/vendor/vendor2.png);
     background-size: 100%;
     background-repeat: no-repeat;
     margin-top: 50px;
@@ -41,7 +41,7 @@ body {
 }
 .container button {
     margin-top: -300px;
-    background-image: url(../AsbunQ/img/vendor5.png);
+    background-image: url(../AsbunQ/assets/vendor/vendor5.png);
     background-size: 100%;
     background-repeat: no-repeat;
     margin-left: auto;
