@@ -59,3 +59,8 @@ body {
     animation: normal;
     animation-duration: 0.5s;
 }
+.icons {
+    display: absolute;
+    background: red;
+    align-items: center;
+}
