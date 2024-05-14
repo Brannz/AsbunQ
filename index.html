@@ -144,6 +144,7 @@
             animation: normal;
             animation-duration: 0.5s;
         }
+        
         .vendor1::after{
             content: " ";
             background-image: url(../AsbunQ/img/vendor1.png);
@@ -159,6 +160,22 @@
             src:url(../AsbunQ/img/vendor3.png)
 
         }
+
+        .parent {
+        position: relative;
+        top: 0;
+        left: 0;
+        }
+        .vendor1::after {
+        position: relative;
+        top: 0;
+        left: 0;
+        }
+        .vendor3 {
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        }
     </style>
 </head>
 <body>
@@ -168,20 +185,18 @@
         <div class="starthird"></div>
         <div class="starfourth"></div>
         <div class="starfifth"></div>
-        <div class="vendor3"></div>
     </div>
 
     <div class="parent">
         <img class="vendor1" src="../AsbunQ/img/vendor1.png"/>
-        <img class="vendor3" src="../AsbunQ/img/vendor3.png" />
+        <img class="vendor3" src="../AsbunQ/img/vendor3.png"/>
 
     </div>
-    
+
     <div class="container">
         <p>Blablabla Asbun</p>
         <h2>Pengen tau kamu loh</h2>
         <button>mulai</button>
-        <div class="vendor1"></div>
     </div>
 </body>
 </html>
