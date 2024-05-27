@@ -63,8 +63,6 @@
 
             body {
                 font-family: 'BlueBerry';
-                background-position: 0px 0px, 52px 52px;
-                background-size: 104px 104px;
                 background-color: #393758;
                 display: grid;
                 cursor: url('../AsbunQ/cursor.png'), auto;
@@ -86,6 +84,33 @@
                 bottom: 13.33%;
             }
 
+            /* LAYOUT RESPONSIVE */
+            . layout { 
+                display:grid;
+                gap: 4px;
+                grid-template-rows: 40px 40px auto 60px 60px 60px;
+                grid-template-columns: 1 fr;
+                grid-template-areas: 'header' 'main' 'footer';
+                height: 100vh; 
+            }
+            @media (min-width: 480px){
+                .layout {
+                    display:grid;
+                    grid-template-rows: 40px auto 80px 40px;
+                    grid-template-columns: 160px auto auto ;
+                    grid-template-areas: ;
+                }
+                header {
+                    grid-area: header;
+                }
+                main {
+                    grid-area:main;
+                }
+                footer {
+                    grid-area: footer;
+                }
+            }
+            /* LAYOUT END RESPONSIVE */
             /*icon*/
 
             .Picture40 {
@@ -153,6 +178,12 @@
             <img class="Picture42" src="../AsbunQ/baby/Picture42.png"/>
             <img class="Picture21" src="../AsbunQ/baby/Picture21.png"/>
             <img class="Picture17" src="../AsbunQ/baby/Picture17.png"/>
+        </div>
+
+        <div class="layout">
+            <header> header </header>
+            <main> main </main>
+            <footer> footer </footer>
         </div>
 
         <div class="container" >
