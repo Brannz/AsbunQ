@@ -61,7 +61,7 @@
             }
             /*akhir animasi belakang*/
 
-            body {
+            .body {
                 font-family: 'BlueBerry';
                 background-color: #393758;
                 display: grid;
@@ -123,60 +123,62 @@
                 }
                 header {
                     grid-area: header;
+
+                    .Picture42 {
+                        position: absolute;
+                        display: absolute;
+                        width: 100%;
+                        height: 100%;
+                        left: 74.53%;
+                        right: 4.8%;
+                        top: 10.67%;
+                        bottom: 48.11%;
+                        background-repeat:no-repeat;
+                    }
+
+                    .Picture21 {
+                        position: absolute;
+                        display: absolute;
+                        width: 100px;
+                        left: 12.09%;
+                        right: 65.27%;
+                        top: 5.56%;
+                        bottom: 55.78%;
+                        background-repeat:no-repeat;
+                    }
                 }
                 main {
                     grid-area:main;
+
+                    .Picture40 {
+                        position: absolute;
+                        display: absolute;
+                        width: 100px;
+                        left: 7.36%;
+                        right: 73.18%;
+                        top: 61.11%;
+                        bottom: 9.56%;
+                        background-repeat:no-repeat;
+                    }
+                    .Picture17 {
+                        position: absolute;
+                        display: absolute;
+                        width: 100;
+                        left: 54.39%;
+                        right: 12.77%;
+                        top: 73.22%;
+                        bottom: 4.67%;
+                        background-repeat:no-repeat;
+                    }
                 }
+                
                 footer {
                     grid-area: footer;
                 }
             }
             /* LAYOUT END RESPONSIVE */
             /*ICON*/
-            .Picture40 {
-                position: absolute;
-                display: absolute;
-                width: 100px;
-                left: 7.36%;
-                right: 73.18%;
-                top: 61.11%;
-                bottom: 9.56%;
-                background-repeat:no-repeat;
-            }
 
-            .Picture42 {
-                position: absolute;
-                display: absolute;
-                width: 100%;
-                height: 100%;
-                left: 74.53%;
-                right: 4.8%;
-                top: 10.67%;
-                bottom: 48.11%;
-                background-repeat:no-repeat;
-            }
-
-            .Picture21 {
-                position: absolute;
-                display: absolute;
-                width: 100px;
-                left: 12.09%;
-                right: 65.27%;
-                top: 5.56%;
-                bottom: 55.78%;
-                background-repeat:no-repeat;
-            }
-
-            .Picture17 {
-                position: absolute;
-                display: absolute;
-                width: 100;
-                left: 54.39%;
-                right: 12.77%;
-                top: 73.22%;
-                bottom: 4.67%;
-                background-repeat:no-repeat;
-            }
 
             /*END ICON*/
 
@@ -201,16 +203,16 @@
         </div>
 
         <div class="layout">
-            <header> header </header>
-            <main> main </main>
-            <footer> footer </footer>
+            <header>  </header>
+            <main>  </main>
+            <footer>  </footer>
         </div>
 
         <div class="flex-container >
             <head> 3 Peserta (Jumlah Peserta) </head>
 
-            <input class= "spillthename" placeholder="spillthename"> Spill The Name <input>
-            <select class="select" placeholder=" select"> </select>
+            <input type= "text" class= "spillthename" placeholder="spillthename"> Spill The Name </input>
+            <input type= "select" class="select" placeholder=" select"> </input>
             <button>  ok </button>
 
 
