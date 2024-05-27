@@ -175,6 +175,37 @@
         }
 
         /* END PIG */
+        
+            /* LAYOUT RESPONSIVE */
+            .layout { 
+                display:grid;
+                gap: 4px;
+                grid-template-rows: 40px 40px auto 60px 60px 60px;
+                grid-template-columns: 1 fr;
+                grid-template-areas: 'header' 'main' 'footer';
+                height: 100vh; 
+            }
+            @media (min-width: 480px){
+                .layout {
+                    display:grid;
+                    background-color: #393758;
+                    grid-template-rows: 40px auto 80px 40px;
+                    grid-template-columns: 160px auto auto ;
+                    grid-template-areas: ;
+                }
+                aside {
+                    grid-area: aside;
+                }
+
+                main {
+                    grid-area:main;
+                }
+
+                bside {
+                    grid-area:bside;
+                }
+            }
+            /* LAYOUT END RESPONSIVE */
     </style>
   </head>
 
@@ -200,6 +231,7 @@
         <div class="starfourth"></div>
         <div class="starfifth"></div>
     </div>
+    
 
 
 
