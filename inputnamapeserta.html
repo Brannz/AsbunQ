@@ -86,26 +86,7 @@
                 bottom: 13.33%;
             }
 
-            /* TABEL RESPONSIVE */
-            .flex-container {
-                display:flex;
-                flex-wrap: wrap;
-                gap:8px;
-            }
 
-            .email {
-                flex:1 0 140px; 
-            }
-
-            .spillthename {
-                flex: 1 0 140px;
-            }
-
-            .button {
-                flex: 1 0 60px;
-            }
-
-            /* TABEL END RESPONSIVE */
 
             /* LAYOUT RESPONSIVE */
             .layout { 
@@ -137,7 +118,50 @@
                 }
             }
             /* LAYOUT END RESPONSIVE */
-            
+
+            /* TABEL RESPONSIVE */
+            .flex-container {
+                display:flex;
+                flex-wrap: wrap;
+                gap:8px;
+            }
+
+            .email {
+                flex:1 0 140px; 
+            }
+
+            .spillthename {
+                flex: 1 0 140px;
+            }
+
+            .button {
+                flex: 1 0 60px;
+            }
+
+            /* TABEL END RESPONSIVE */
+
+            /*INPUT LABEL*/
+            .input-group {
+                position:relative;
+            }
+            .input {
+                border: solid 1.5px #00BCD4;
+                border-radius:7px;
+                background: none;
+                padding:15px;
+                font-size: 18px;
+                color:#CDDC39; 
+            }
+            .label {
+                position:absolute;
+                left:15px;
+                color:#00BCD4;
+                pointer-events:none;
+                transform: translateY(15px);
+                transition: 150ms cubic-bezier(0,4,0,0,2,1);
+            }
+            /*INPUT END LABEL*/
+
             /*ICON*/
                     .Picture42 {
                         position: absolute;
@@ -213,8 +237,11 @@
             <input class="email" placeholder="Email">
             <input class="spillthename" placeholder="Spill The Name"> 
             <button>  ok </button>
+        </div>
 
-
+        <div class="input-group">
+            <input type="text" name="text" class="input"<
+            <label class="label"> Name </label>
         </div>
 
     </body>
